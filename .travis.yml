@@ -5,4 +5,4 @@ services:
   - postgresql
   - docker
 install: true
-script:mvn clean package _ DskipTest=true
+script: mvn clean package _ DskipTest=true
