@@ -4,3 +4,5 @@ language: java
 services:
   - postgresql
   - docker
+install: true
+script:mvn clean package _ DskipTest=true
