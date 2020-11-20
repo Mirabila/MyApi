@@ -11,4 +11,5 @@ public interface PictureService {
     Picture save(Picture picture);
     void delete(Long id);
 
+
 }
