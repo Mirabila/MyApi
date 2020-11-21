@@ -4,7 +4,5 @@ language: java
 services:
   - postgresql
   - docker
-install: true
-script: mvn clean package _ DskipTest=true
-before_install:
-  - chmod +x mvnw
+install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
