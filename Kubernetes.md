@@ -55,3 +55,5 @@ spec:
   selector:
     app: my-app
  ```
+ 
+ ![Просматриваем поды](8.jpg)
