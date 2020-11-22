@@ -8,7 +8,7 @@
 # Инструкции по запуску приложения
 Для запуска потребуется Docker, Idea, PostgresSQL, git.
 
-Используем  запуска БД на Docker используем команду:
+Для запуска БД на Docker используем команду:
 ```docker run -e POSTGRES_PASSWORD=pass -p 5432:5432 postgres```
 
 
@@ -48,3 +48,12 @@ GET HOSTNAME (GET) ```http://localhost:8080/api/v1/status```
 
 Добавить новую запись:
 ```curl -X POST http://localhost:8080/api/v1/pictures -d {«name»: «Мадонна″, "author": "Леонардо да Винчи", "year": 1513} -H «Content-Type:application/json»```
+
+
+--------------------------------
+
+Лабораторная работа №3: CI/CD и деплой приложения в Heroku
+
+Целью лабораторной работы является знакомство с CI/CD и его реализацией на примере Travis CI и Heroku.
+
+[Ссылка на развернутое приложение](https://mirabila.herokuapp.com/api/v1/status)
