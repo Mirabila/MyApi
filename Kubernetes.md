@@ -36,6 +36,9 @@ spec:
         - ip: "192.168.49.1" # The IP of localhost from MiniKube
           hostnames:
             - postgres.local```
+
+
+
 # service.yaml
 ```apiVersion: v1
 kind: Service
