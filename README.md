@@ -21,6 +21,18 @@
 Запустим контейнер:
 ```docker run -p 8080:8080 myapi:latest```
 
+# Ендпоинты
+GET (GET) ```http://localhost:8080/api/v1/pictures/{id}```
+
+GET ALL(GET) ```http://localhost:8080/api/v1/pictures```
+
+SAVE (POST) ```http://localhost:8080/api/v1/pictures {«name»: «Мадонна″, "author": "Леонардо да Винчи", "year": 1513}```
+
+DELETE (DELETE) ```http://localhost:8080/api/v1/pictures/{id}```
+
+GET HOSTNAME (GET) ```http://localhost:8080/api/v1/status```
+
+
 # CURL
 Получить hostname:
 ```curl -X GET http://localhost:8080/api/v1/status```
@@ -32,7 +44,7 @@
 ```curl -X GET http://localhost:8080/api/v1/pictures/{id}```
 
 Удалить по id:
-```curl -X POST http://localhost:8080/api/v1/pictures/{id}```
+```curl -X DELETE http://localhost:8080/api/v1/pictures/{id}```
 
 Добавить новую запись:
-```curl -X POST http://localhost:8080/api/v1/ -d {«name»: «Мадонна″, "author": "Леонардо да Винчи", "year": 1513} -H «Content-Type:application/json»```
+```curl -X POST http://localhost:8080/api/v1/pictures -d {«name»: «Мадонна″, "author": "Леонардо да Винчи", "year": 1513} -H «Content-Type:application/json»```
