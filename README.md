@@ -13,7 +13,7 @@
 
 
 Для сборки maven из командной строки используем:
-```mvn package -D maven.test.skip=true```
+```mvnw clean install```
 
 Производим сборку Docker образа:
 ```docker build . -t myapi:latest```
