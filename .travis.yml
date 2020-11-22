@@ -12,8 +12,10 @@ env:
     - secure: "ZTDovBkt1JFhx2BdW5gBlo8QoM8aMscVskoNtKRLjMr6hL1fSCgUfIYKjWROuHccarOnhKm2XRIjWqpX/KjYeWnh7w10VRFDIn8f8aCsT3ULiumMR3TgkSn5IzGnjK8DoaXFhLJB2om1kEd9bDqqA5598JYRSQSEUF52lnkORFCingrHG6Y/7+TlMPZ8i7DE/G/8omwvVuHA5eVpvElr79+PBQQMnlC2musfrqIgA/T6QLYJ40vCG7xzWAUQu+5/S9wmeiTHEHHb3zA0Qao/d9+3SZVTi5Lg2pdx2RHU8FMgzeYBFRbL+UiH1uceOUXul/rFrVcbYDsPlHolc4at3k7Giffh+ooopuTBkaljkXvFitdkRMeW9e4q/doHB95pyO4uSHBbzplsES+A1YnX7q272kPOTcLEmGU4ey3m+vp0CBeMRiNs9SHQapT5kWAhOHFLXFkuV83hjH/u7evBQLYxt234qIiltHQMSYK2aIK4+OCz5jaqR0BatYd3R7x2vR9sV2s9V8lxqZ290S7mXQ6m6rUGmxHZSW6mG5WPRn6aZK+tbaHt5GGkfumGMQ3fUUFgUUP6cGwDD7hG48yliw/guEf1hSKtEDCz9R4NfMen97K3yYxSwVsmEW0QAMO+HhJPE56pPFCDTKysS+CDClTpTQSnhow9LXRCz2MLkzQ="
     - COMMIT=${TRAVIS_COMMIT::7}
 
+install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
-  - ./mvnw clean install -B
+  - mvn test
 
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
