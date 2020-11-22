@@ -35,7 +35,8 @@ spec:
       hostAliases:
         - ip: "192.168.49.1" # The IP of localhost from MiniKube
           hostnames:
-            - postgres.local```
+            - postgres.local
+```
 
 
 
@@ -52,4 +53,5 @@ spec:
       protocol: TCP
       targetPort: 8080
   selector:
-    app: my-app```
+    app: my-app
+ ```
